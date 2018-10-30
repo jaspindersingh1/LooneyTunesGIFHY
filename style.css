@@ -1,0 +1,19 @@
+/* style */
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url(https://orig00.deviantart.net/2c14/f/2015/161/e/e/the_looney_tunes_show_folder_icon_by_gterritory-d8wq5kd.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center; */
+    
+}
+
+.text-size {
+    font-size: 24px;
+}
+
+.section1 {
+    float : right;
+}
