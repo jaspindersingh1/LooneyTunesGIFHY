@@ -7,7 +7,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-position: center; */
-    
+    background-color: #F0F2FC; 
+    /* Second color choice DBDCE5 */
 }
 
 .text-size {
@@ -16,4 +17,15 @@ body {
 
 .section1 {
     float : right;
+}
+
+.cartoonButton{
+    background-color: #CC8D28;
+    border-radius: 16px;;
+    color: white;
+    /* font-size: 12px; */
+}
+
+img {
+    padding: 10px;
 }
