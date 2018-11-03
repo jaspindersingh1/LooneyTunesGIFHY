@@ -29,10 +29,10 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
 // }
 
 // connect to gifhy api
-    $(".cartoonButton").on("click", function(){
-        // function displayCartoons() {
+    $(document).on("click", ".cartoonButton", function(){
+        
             var looneys = $(this).attr("data-name");
-            var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + looneys + "&api_key=7kIYFwakapwX5tKnveS4JHkXnDD53Zc3&limit=10";
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + looneys + "&api_key=7kIYFwakapwX5tKnveS4JHkXnDD53Zc3&limit=10";
 
             $.ajax({
                 url: queryURL,
@@ -74,7 +74,6 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
                 //         $(this).attr("data-state", "still");
                 //     }
             });
-        // }
     });
 
 
@@ -98,14 +97,4 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
         // push new search to the topics array 
         topics.push(newLooney);
         console.log(topics)
-
-        // renderButtons();
     });
-
-    // Adding a click event listener to all elements with a class of "cartoonButton"
-    $(document).on("click", ".cartoonButton", function(){
-        
-    })
-
-    // Calling the renderButtons function to display the intial buttons
-    // renderButtons();
