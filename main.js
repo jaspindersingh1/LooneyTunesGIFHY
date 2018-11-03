@@ -1,4 +1,6 @@
-// Game logic
+////////////////////////////////////// 
+//////////// Game logic /////////////
+/////////////////////////////////////
 
 // PHASE 1: create an array, dynamically create buttons for that array, connect to api and display images to the html page
 // PHASE 2: add new items to the array, fix display ratings (currently not showing)
@@ -17,6 +19,8 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
         newButton.addClass("cartoonButton");
         // give the new button an attribute of its index
         newButton.attr("data-name", topics[i])
+        // add another attribute and set it equal to still
+        newButton.attr("data-state", "still")
         // give the button its text
         newButton.text(topics[i])
         // console.log(newButton)
@@ -61,6 +65,14 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
                     $("#gifs-appear-here").prepend(looneyImg);
                     $("#gifs-appear-here").prepend(p);  
                 }
+                // var state = $(this).attr("data-state")
+                //     if(state === "still"){
+                //         $(this).attr("src", $(this).attr("data-animate"));
+                //         $(this).attr("data-state", "animate");
+                //     } else {
+                //         $(this).attr("src", $(this).attr("data-still"));
+                //         $(this).attr("data-state", "still");
+                //     }
             });
         // }
     });
@@ -92,6 +104,7 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
 
     // Adding a click event listener to all elements with a class of "cartoonButton"
     $(document).on("click", ".cartoonButton", function(){
+        
     })
 
     // Calling the renderButtons function to display the intial buttons
