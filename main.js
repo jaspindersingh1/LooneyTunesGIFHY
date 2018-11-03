@@ -34,23 +34,32 @@ var topics = ["Bugs Bunny", "Daffy Duff", "Tasmanian Devil" ]
                 url: queryURL,
                 method: "GET"
             }).then(function(response){
+                // console log the response from the api
                 console.log(response)
+                // store the respone in a result variable for easy use
                 var results = response.data;
+                // run a for loop to create new divs in the array 
                 for(var i =0; i < results.length; i++){
+                    // create and store the div in a variable
                     var looneyDiv = $("<div>");
+                    // create a paragrapah tag and store in a var
                     var p = $("<p>");
                     // console.log(p)
+                    // get the ratings from the array and add the text to the paragraph
                     p.text("Rating: " + results[i].rating)
                     // console.log(results[i].rating)
+                    // create new image tag and variable
                     var looneyImg = $("<img>");
+                    // add an attribute to the grab the image from the reponse array
                     looneyImg.attr("src", results[i].images.fixed_height.url)
                     // console.log(results[i].images.fixed_height.url)
-                    // looneyDiv.append(p); THIS DOES NOT SHOW THE P TAG IN THE CONSOLE.
-                    looneyImg.append(p); // THIS SHOWS THE P TAG IN THE CONSOLE.
+                    // append the rating to the image
+                    looneyImg.append(p);
+                    // append the image to the new div created
                     looneyDiv.append(looneyImg);
-
-                    // prepend to the dom
+                    // prepend image and ratings to the dom
                     $("#gifs-appear-here").prepend(looneyImg);
+                    $("#gifs-appear-here").prepend(p);  
                 }
             });
         // }
